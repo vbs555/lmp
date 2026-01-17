@@ -11,9 +11,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set date tag
+      - name: Set date
         id: date
-        run: echo "DATE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+        run: echo "DATE=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+
+      - name: Get next daily tag
+        id: next_tag
+        run: |
+          # получить все теги с сегодняшней датой
+          TAGS=$(curl -s -u ${{ secrets.DH_L }}:${{ secrets.DH_T }} \
+            "https://hub.docker.com/v2/repositories/bovs/my_lmp/tags/?page_size=100" \
+            | jq -r '.results[].name' | grep "^${DATE}" || true)
+          
+          COUNT=$(echo "$TAGS" | wc -l)
+          if [ "$COUNT" -eq 0 ]; then
+            NEXT_TAG="$DATE"
+          else
+            NEXT_TAG="$DATE.$((COUNT+1))"
+          fi
+          echo "NEXT_TAG=$NEXT_TAG" >> $GITHUB_ENV
+          echo "Next tag: $NEXT_TAG"
 
       - uses: docker/login-action@v3
         with:
@@ -25,7 +42,6 @@ jobs:
           push: true
           tags: |
             bovs/my_lmp:latest
-            bovs/my_lmp:${{ env.DATE_TAG }}
+            bovs/my_lmp:${{ env.NEXT_TAG }}
           build-args: |
             domain=127.0.0.1
-            
