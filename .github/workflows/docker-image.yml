@@ -38,7 +38,9 @@ jobs:
 
       - uses: docker/build-push-action@v5
         with:
+          context: .
           push: true
+          no-cache: true
           tags: |
             bovs/my_lmp:latest
             bovs/my_lmp:${{ env.NEXT_TAG }}
