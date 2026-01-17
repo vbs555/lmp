@@ -26,3 +26,6 @@ jobs:
           tags: |
             bovs/my_lmp:latest
             bovs/my_lmp:${{ env.DATE_TAG }}
+          build-args: |
+            domain=127.0.0.1
+            
