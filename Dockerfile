@@ -1,4 +1,4 @@
-FROM httpd:alpine3.15
+FROM httpd:alpine
 ARG domain
 ARG prefix="http://"
 RUN test -n "$domain" || (echo "ERROR: domain is not set" && false)
