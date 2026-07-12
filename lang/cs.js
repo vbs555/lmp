@@ -26,6 +26,7 @@ export default {
     search_searching: "Probíhá hledání...",
     search_start: "Začít hledat",
     search_nofound: "Podle vašeho dotazu nebylo nic nalezeno.",
+	global_search: 'Globální vyhledávání',
 
     full_genre: "Žánr",
     full_production: "Produkce",
@@ -184,6 +185,11 @@ export default {
 
     settings_player_type: "Typ přehrávače",
     settings_player_type_descr: "Jakým přehrávačem přehrávat video",
+    settings_infuse_launch_mode: "Spuštění v Infuse",
+    settings_infuse_launch_mode_descr: "Co dělat při otevření videa v Infuse. U torrentů vždy okamžité přehrání",
+    settings_infuse_launch_ask: "Zeptat se při spuštění",
+    settings_infuse_launch_play: "Přehrát",
+    settings_infuse_launch_save_and_play: "Uložit a přehrát",
     settings_player_iptv_type: "Typ přehrávače pro IPTV",
     settings_player_iptv_type_descr: "Jakým přehrávačem přehrávat IPTV kanály",
     settings_player_torrent_type: "Typ přehrávače pro torrenty",
@@ -192,10 +198,8 @@ export default {
     settings_player_reset_descr: "Resetuje vybraný Android přehrávač v aplikaci",
     settings_player_path: "Cesta k přehrávači",
     settings_player_path_descr: "Uveďte cestu k spustitelnému souboru přehrávače",
-    settings_player_vlc_header: 'Nastavení VLC',
-    settings_player_vlc_api_password: 'Heslo VLC API',
-    settings_player_vlc_api_password_descr: 'Výchozí: 123456',
-    settings_player_vlc_fullscreen: 'Spustit v režimu celé obrazovky',
+    settings_player_external_header: 'Externí přehrávač',
+    settings_player_external_fullscreen: 'Spustit v režimu celé obrazovky',
     settings_player_normalization: "Normalizace zvuku",
     settings_player_normalization_descr: "Normalizuje zvuk na jednu úroveň, snižuje hlasité zvuky a zvyšuje tiché.",
     settings_player_next_episode: "Další epizoda",
@@ -395,6 +399,7 @@ export default {
     title_mytorrents: "Moje torrenty",
     title_last: "Poslední",
     title_action: "Akce",
+    title_action_infuse: "Akce Infuse",
     title_producer: "Režisér",
     title_collection: "Kolekce",
     title_recomendations: "Doporučení",
@@ -1260,6 +1265,11 @@ export default {
     player_segments_value_auto: 'Automaticky přeskočit',
     player_segments_value_user: 'Vlastní',
     player_segments_skiped: 'Segment přeskočen',
+    player_segments_skip_now: 'Přeskočit',
+    player_segments_skip_in: 'Přeskočit za',
+    player_segments_skip_intro: 'Přeskočit úvod',
+    player_segments_next: 'Další epizoda',
+    player_segments_next_in: 'Další epizoda za',
     subscribe_info: 'V sekci „Odběry“ uvidíte všechny své odběry překladů. Dostanete upozornění, až vyjde nová epizoda s vaším vybraným překladem.',
     no_watch_history: 'Žádná historie prohlížení',
     settings_request_caching_use: 'Povolit ukládání do mezipaměti',
@@ -1301,4 +1311,34 @@ export default {
     dmca_descr_lgbt: 'Prohlížení není ve vašem regionu možné, protože může obsahovat LGBT obsah. Takový materiál může být v některých zemích zakázán nebo omezen.',
 
     settings_lgbt_content_block: 'Blokovat LGBT obsah',
+
+    // todo:
+    adult_content_title: 'Obsah pro dospělé',
+    adult_content_text_warning: 'Obsah může obsahovat materiál pro dospělé, který může být nevhodný pro některé diváky.',
+    adult_content_text_modal: 'Tento film nebo seriál je označen jako obsahující obsah pro dospělé. Musíte být starší 18 let, abyste mohli tento materiál sledovat. Potvrďte prosím, že jste dosáhli zákonného věku pro pokračování ve sledování.',
+
+    adult_content_confirm: 'Je mi 18 let nebo více',
+    adult_content_deny: 'Je mi méně než 18 let',
+
+    inner_player_disclaimer_title: 'Upozornění přehrávače',
+    inner_player_disclaimer_text: 'Rozumím, že spouštím přehrávač s neúplnou podporou, a rozumím, že to může způsobit netypické chování zařízení. Doporučuje se přejít na přehrávače rodiny tvOS nebo jiné alternativy.',
+
+    inner_player_disclaimer_change_player: 'Změnit přehrávač',
+    remote_configuration_settings_title: 'Vzdálená konfigurace',
+    remote_configuration_registration_text: 'Vzdálená konfigurace poskytuje dočasný přístup k vaší aplikaci, jiná aplikace bude moci instalovat rozšíření a konfigurovat parametry.',
+    remote_configuration_waite_text: 'Nyní můžete předat tento kód jiné aplikaci, abyste jí udělili přístup k nastavení.',
+    remote_configuration_open_button: 'Otevřít přístup',
+    remote_configuration_code_life: 'Kód je platný',
+    remote_configuration_notice_nocode: 'Nepodařilo se otevřít přístup',
+
+    settings_server_gts: 'Překódování',
+    settings_server_gts_descr: 'Automaticky převést video do kompatibilního formátu v případě potřeby.',
+
+    title_metadata: 'Metadata',
+    title_moods: 'Nálady',
+    title_meta_violence: 'Násilí',
+    title_meta_fear: 'Strach',
+    title_meta_profanity: 'Výrazivo',
+    title_meta_sadness: 'Smutek',
+    title_meta_sex: 'Sexualita'
 };

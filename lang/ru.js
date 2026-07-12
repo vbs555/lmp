@@ -26,6 +26,7 @@ export default {
     search_searching: 'Идет поиск...',
     search_start: 'Начать поиск',
     search_nofound: 'По вашему запросу ничего не найдено.',
+	global_search: 'Глобальный поиск',
 
     full_genre: 'Жанр',
     full_production: 'Производство',
@@ -187,6 +188,11 @@ export default {
 
     settings_player_type: 'Тип плеера',
     settings_player_type_descr: 'Каким плеером воспроизводить видео',
+    settings_infuse_launch_mode: 'Запуск в Infuse',
+    settings_infuse_launch_mode_descr: 'Что делать при открытии видео в Infuse. Для торрентов всегда сразу воспроизведение',
+    settings_infuse_launch_ask: 'Спрашивать при запуске',
+    settings_infuse_launch_play: 'Играть',
+    settings_infuse_launch_save_and_play: 'Сохранить и играть',
     settings_player_iptv_type: 'Тип плеера для IPTV',
     settings_player_iptv_type_descr: 'Каким плеером воспроизводить IPTV-каналы',
     settings_player_torrent_type: 'Тип плеера для торрентов',
@@ -195,10 +201,8 @@ export default {
     settings_player_reset_descr: 'Сбрасывает выбранный Android-плеер в приложении',
     settings_player_path: 'Путь к плееру',
     settings_player_path_descr: 'Укажите путь к исполняемому файлу плеера',
-    settings_player_vlc_header: 'Настройки VLC',
-    settings_player_vlc_api_password: 'Пароль VLC API',
-    settings_player_vlc_api_password_descr: 'По-умолчанию: 123456',
-    settings_player_vlc_fullscreen: 'Запускать в полноэкранном режиме',
+    settings_player_external_header: 'Внешний плеер',
+    settings_player_external_fullscreen: 'Запускать в полноэкранном режиме',
     settings_player_normalization: 'Нормализация звука',
     settings_player_normalization_descr: 'Нормализирует звук в один уровень, понижает громкие звуки и повышает тихие.',
     settings_player_next_episode: 'Следующая серия',
@@ -249,6 +253,9 @@ export default {
     settings_server_login: 'Логин',
     settings_server_password: 'Пароль',
     settings_server_not_specified: 'Не указан',
+
+    settings_server_gts: 'Транскодирование',
+    settings_server_gts_descr: 'Автоматически преобразовывать видео в совместимый формат при необходимости.',
 
     settings_webos_launcher: 'Запуск приложения',
     settings_webos_launcher_add_device: 'Установить как стартовое',
@@ -351,7 +358,7 @@ export default {
     torrent_parser_voice_amateur: 'Любительский',
     torrent_parser_reset: 'Сбросить фильтр',
     torrent_parser_empty: 'Не удалось получить результатов',
-    torrent_parser_no_hash: 'Не удалось получить HASH',
+    torrent_parser_no_hash: 'Не удалось получить HASH, попробуйте перезагрузить TorrServer',
     torrent_parser_added_to_mytorrents: 'добавлено в «Мои торренты»',
     torrent_parser_add_to_mytorrents: 'Добавить в «Мои торренты»',
     torrent_parser_label_title: 'Пометить',
@@ -402,6 +409,7 @@ export default {
     title_mytorrents: 'Мои торренты',
     title_last: 'Последняя',
     title_action: 'Действие',
+    title_action_infuse: 'Действие Infuse',
     title_producer: 'Режиссер',
     title_collection: 'Коллекция',
     title_recomendations: 'Рекомендации',
@@ -481,6 +489,14 @@ export default {
     title_comedy_of_2000: 'Смех 2000-х',
     title_comedy_of_2010: 'Юмор 2010-х',
     title_comedy_of_2015: 'Современные комедии',
+
+    title_metadata: 'Метаданные',
+    title_moods: 'Настроения',
+    title_meta_violence: 'Насилие',
+    title_meta_fear: 'Страх',
+    title_meta_profanity: 'Лексика',
+    title_meta_sadness: 'Грусть',
+    title_meta_sex: 'Сексуальность',
 
     reactions_none: 'Нет реакций',
     reactions_fire: 'Супер',
@@ -982,6 +998,11 @@ export default {
     player_segments_value_auto: 'Автопропуск',
     player_segments_value_user: 'Пользовательский',
     player_segments_skiped: 'Cегмент пропущен',
+    player_segments_skip_now: 'Пропустить',
+    player_segments_skip_in: 'Пропуск через',
+    player_segments_skip_intro: 'Пропустить заставку',
+    player_segments_next: 'Следующая серия',
+    player_segments_next_in: 'Следующая серия через',
 
     broadcast_open: 'Открыть карточку на другом устройстве',
     broadcast_play: 'Выберите устройство для просмотра',
@@ -1299,4 +1320,22 @@ export default {
 
     remote_helper_long: 'Удерживайте кнопку (ОК) для вызова меню',
     no_watch_history: 'Нет истории просмотра',
+
+    adult_content_title: 'Взрослый контент',
+    adult_content_text_warning: 'Контент может содержать материалы для взрослых, которые могут быть неуместны для некоторых зрителей.',
+    adult_content_text_modal: 'Этот фильм или сериал помечен как содержащий взрослый контент. Для просмотра этого материала вам должно быть 18 лет или больше. Пожалуйста, подтвердите, что вы достигли совершеннолетия, чтобы продолжить просмотр.',
+
+    adult_content_confirm: 'Мне 18 лет или больше',
+    adult_content_deny: 'Мне меньше 18 лет',
+
+    inner_player_disclaimer_title: 'Дисклеймер плеера',
+    inner_player_disclaimer_text: 'Я понимаю, что запускаю плеер с неполной поддержкой, и понимаю, что это может приводить к нетипичному поведению устройства. Оптимально перейти на плееры семейства tvOS или другие альтернативы.',
+
+    inner_player_disclaimer_change_player: 'Сменить плеер',
+    remote_configuration_settings_title: 'Удалённая конфигурация',
+    remote_configuration_registration_text: 'Удалённая конфигурация предоставляет временный доступ к вашему приложению, другое приложение сможет установить расширения и настроить параметры.',
+    remote_configuration_waite_text: 'Теперь вы можете передать этот код в другое приложение, чтобы предоставить доступ к настройкам.',
+    remote_configuration_open_button: 'Открыть доступ',
+    remote_configuration_code_life: 'Код действителен',
+    remote_configuration_notice_nocode: 'Не удалось открыть доступ'
 }

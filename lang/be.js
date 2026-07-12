@@ -26,6 +26,7 @@ export default {
     search_searching: 'Ідзе пошук...',
     search_start: 'Пачаць пошук',
     search_nofound: 'Па вашым запыце нічога не знойдзена.',
+	global_search: 'Сусветны пошук',
 
     full_genre: 'Жанр',
     full_production: 'Вытворчасць',
@@ -151,16 +152,19 @@ export default {
     
     settings_player_type: 'Тып плэера',
     settings_player_type_descr: 'Якім плэерам прайграваць',
+    settings_infuse_launch_mode: 'Запуск у Infuse',
+    settings_infuse_launch_mode_descr: 'Што рабіць пры адкрыцці відэа ў Infuse. Для торэнтаў заўжды адразу прайграванне',
+    settings_infuse_launch_ask: 'Пытаць пры запуску',
+    settings_infuse_launch_play: 'Гуляць',
+    settings_infuse_launch_save_and_play: 'Захаваць і гуляць',
     settings_player_iptv_type: 'Тып плэера для IPTV',
     settings_player_iptv_type_descr: 'Якім плэерам прайграваць IPTV каналы',
     settings_player_reset: 'Скінуць плэер па змаўчанні',
     settings_player_reset_descr: 'Скідае абраны Android плэер у дадатку',
     settings_player_path: 'Шлях да плэера',
     settings_player_path_descr: 'Укажыце шлях да плэера .exe',
-    settings_player_vlc_header: 'Налады VLC',
-    settings_player_vlc_api_password: 'Пароль VLC API',
-    settings_player_vlc_api_password_descr: 'Па змаўчанні: 123456',
-    settings_player_vlc_fullscreen: 'Запускать у поўнаэкранным рэжыме',
+    settings_player_external_header: 'Знешні плэер',
+    settings_player_external_fullscreen: 'Запускать у поўнаэкранным рэжыме',
     settings_player_normalization: 'Нармалізацыя гуку',
     settings_player_normalization_descr: 'Нармалізуе гук у адзін узровень, паніжае гучныя гукі і павялічвае ціхія.',
     settings_player_next_episode: 'Наступная серыя',
@@ -283,7 +287,7 @@ export default {
     torrent_parser_voice_amateur: 'Любіцельскі',
     torrent_parser_reset: 'Скінуць фільтр',
     torrent_parser_empty: 'Немагчыма атрымаць вынікаў',
-    torrent_parser_no_hash: 'Не атрымалася атрымаць HASH',
+    torrent_parser_no_hash: 'Не атрымалася атрымаць HASH, паспрабуйце перезагрузить TorrServer',
     torrent_parser_added_to_mytorrents: 'дададзена ў «Мае торэнты»',
     torrent_parser_add_to_mytorrents: 'Дадаць у «Мае торэнты»',
     torrent_parser_label_title: 'Пазначыць',
@@ -328,6 +332,7 @@ export default {
     title_mytorrents: 'Мае торэнты',
     title_last: 'Апошняя',
     title_action: 'Дзеянне',
+    title_action_infuse: 'Дзеянне Infuse',
     title_producer: 'Рэжысёр',
     title_collection: 'Калекцыя',
     title_recomendations: 'Рэкамендацыі',
@@ -1264,6 +1269,11 @@ export default {
     player_segments_value_auto: 'Аўтапрапуск',
     player_segments_value_user: 'Карыстальніцкі',
     player_segments_skiped: 'Сегмент прапушчаны',
+    player_segments_skip_now: 'Прапусціць',
+    player_segments_skip_in: 'Прапуск праз',
+    player_segments_skip_intro: 'Прапусціць застаўку',
+    player_segments_next: 'Наступная серыя',
+    player_segments_next_in: 'Наступная серыя праз',
     subscribe_info: 'У раздзеле «Падпіскі» вы ўбачыце ўсе свае падпіскі на пераклады. Вы атрымаеце апавяшчэнне, калі выйдзе новая серыя з выбраным перакладам.',
     no_watch_history: 'Няма гісторыі прагляду',
 
@@ -1306,4 +1316,34 @@ export default {
     dmca_descr_lgbt: 'Прагляд недаступны ў вашым рэгіёне, так як магчыма змяшчае ЛГБТ-кантэнт. У некаторых краінах такія матэрыялы могуць быць забаронены ці абмежаваны.',
 
     settings_lgbt_content_block: 'Блокіроўка ЛГБТ-контента',
+
+    // todo:
+    adult_content_title: 'Кантэнт для дарослых',
+    adult_content_text_warning: 'Кантэнт можа змяшчаць матэрыялы для дарослых, якія могуць быць непрыдатнымі для некаторых гледачоў.',
+    adult_content_text_modal: 'Гэты фільм або серыял пазначаны як той, які змяшчае кантэнт для дарослых. Для прагляду гэтага матэрыялу вам павінна быць 18 гадоў ці болей. Калі ласка, пацвердзіце, што вы дасягнулі паўналецця, каб працягнуць прагляд.',
+
+    adult_content_confirm: 'Мне 18 гадоў ці болей',
+    adult_content_deny: 'Мне менш за 18 гадоў',
+
+    inner_player_disclaimer_title: 'Дысклеймер плэера',
+    inner_player_disclaimer_text: 'Я разумею, што запускаю плэер з няпоўнай падтрымкай, і разумею, што гэта можа выклікаць нетыповыя паводзіны прылады. Аптымальна перайсці на плэеры сямейства tvOS або іншыя альтэрнатывы.',
+
+    inner_player_disclaimer_change_player: 'Змяніць плэер',
+    remote_configuration_settings_title: 'Аддалёная канфігурацыя',
+    remote_configuration_registration_text: 'Аддалёная канфігурацыя забяспечвае часовы доступ да вашага прыкладання, іншае прыкладанне зможа ўсталёўваць пашырэнні і наладжваць параметры.',
+    remote_configuration_waite_text: 'Цяпер вы можаце перадаць гэты код іншаму прыкладанню, каб даць доступ да налад.',
+    remote_configuration_open_button: 'Адкрыць доступ',
+    remote_configuration_code_life: 'Код сапраўдны',
+    remote_configuration_notice_nocode: 'Не ўдалося адкрыць доступ',
+
+    settings_server_gts: 'Перакадаванне',
+    settings_server_gts_descr: 'Аўтаматычна канвертаваць відэа ў сумяшчальны фармат пры неабходнасці.',
+
+    title_metadata: 'Метаданыя',
+    title_moods: 'Настроі',
+    title_meta_violence: 'Гвалт',
+    title_meta_fear: 'Страх',
+    title_meta_profanity: 'Лексіка',
+    title_meta_sadness: 'Сум',
+    title_meta_sex: 'Сексуальнасць'
 }
